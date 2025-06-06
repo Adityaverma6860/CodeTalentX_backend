@@ -9,6 +9,10 @@ require("dotenv").config();
 const connectDB = require("./src/config/dbConnect");
 const userRoutes = require("./src/routes/userRoutes");
 const attendanceRoutes = require('./src/routes/attendanceRoutes');
+const examRoutes = require('./src/routes/examRoutes');
+const reportCardRoutes = require('./src/routes/reportCardRoutes');
+const feeRoutes = require('./src/routes/feeRoutes');
+
 
 dotenv.config();
 const app = express();
@@ -35,7 +39,10 @@ connectDB();
 
 
 app.use("/users", userRoutes);
-app.use('/attendance', attendanceRoutes);
+app.use("/attendance", attendanceRoutes);
+app.use("/exams",examRoutes);
+app.use("/report-card", reportCardRoutes);
+app.use("/fees", feeRoutes);
 
 
 app.listen(PORT, () => {

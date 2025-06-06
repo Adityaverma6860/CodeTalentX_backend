@@ -1,5 +1,5 @@
 const Attendance = require('../models/attendanceModel');
-// const Student = require('../models/studentModel ');
+const Student = require('../models/studentModel');
 
 exports.markAttendance = async (req, res) => {
   try {
