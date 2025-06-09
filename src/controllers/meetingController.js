@@ -1,5 +1,6 @@
 const Meeting = require('../models/meetingModel');
 
+//Meeting Scheduling
 exports.scheduleMeeting = async (req, res) => {
   try {
     const { parentId, teacherId, date, time } = req.body;
@@ -12,6 +13,7 @@ exports.scheduleMeeting = async (req, res) => {
   }
 };
 
+//Get the message form user
 exports.getMeetings = async (req, res) => {
   try {
     const { teacherId } = req.query;
