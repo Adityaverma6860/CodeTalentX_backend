@@ -19,7 +19,7 @@ const reportCardRoutes = require('./src/routes/Examination_Report/reportcardMode
 const feeRoutes = require('./src/routes/Fees_Management/feesRoutes');
 const messageRoutes = require('./src/routes/Parent_Teachers/messageRoutes');
 const meetingRoutes = require('./src/routes/Parent_Teachers/meetingRoutes');
-
+const timetableRoutes = require('./src/routes/Time_Table/TimetableRoutes');
 
 
 dotenv.config();
@@ -57,7 +57,7 @@ app.use("/report-card", reportCardRoutes);
 app.use("/fees", feeRoutes);
 app.use('/messages', messageRoutes);
 app.use('/meetings', meetingRoutes);
-
+app.use('/timetable', timetableRoutes);
 
 app.listen(PORT, () => {
   console.log(` Server running on port ${PORT}`);
